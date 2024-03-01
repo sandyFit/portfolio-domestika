@@ -11,19 +11,20 @@
 
     <main>
         <nav>
-            <ul>
-                <li>About</li>
-                <li>Services</li>
-                <li>Contact</li>
+            <ul>               
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
             </ul>
         </nav>
 
-        <section>
+        <section id="about" class="about-container">
             <article>
                 <div class="empty"></div>
             </article>
 
-            <article>
+            <article class="bio">
                 <div class="blue">
                     <h2>Creative Developer</h2>
                 </div>
@@ -38,31 +39,32 @@
             </article>
         </section>
 
-        <section>
-            <article>
+        <section id="services" class="services">
+            <article class="image service1">
                 <figure>                    
                     <img src="./img/diamond.png" alt="Diamond Shape">
                 </figure>
             </article>
 
-            <article>
-                <h2>HTML</h2>
+            <article class="description">
+                <h2 class="css-title">HTML</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum sequi totam delectus, 
                     blanditiis sint aspernatur iusto culpa at hic numquam, natus amet. 
                     Veritatis debitis nisi tempore veniam architecto nobis.
                 </p>
-                <a href="">More about HTML</a>
+                <a class="css-title" href="">More about HTML</a>
             </article>
         </section>
-        <section>
-            <article>
-                <figure>                    
-                    <img src="./img/octagon.png" alt="Octagon Shape">
+
+        <section class="services">
+            <article class="image service2 ">
+                <figure>                  
+                    <img src="./img/triangle.png" alt="Triangle Shape">                       
                 </figure>
             </article>
 
-            <article>
-                <h2>CSS</h2>
+            <article class="description ">
+                <h2 class="html-title">CSS</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum sequi totam delectus, 
                     blanditiis sint aspernatur iusto culpa at hic numquam, natus amet. 
                     Veritatis debitis nisi tempore veniam architecto nobis.
@@ -70,15 +72,16 @@
                 <a href="">More about CSS</a>
             </article>
         </section>
-        <section>
-            <article>
+
+        <section class="services">
+            <article class="image service3">
                 <figure>                    
-                    <img src="./img/triangle.png" alt="Triangle Shape">
+                    <img src="./img/octagon.png" alt="Octagon Shape">
                 </figure>
             </article>
 
-            <article>
-                <h2>JS</h2>
+            <article class="description">
+                <h2 class="js-title">JS</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum sequi totam delectus, 
                     blanditiis sint aspernatur iusto culpa at hic numquam, natus amet. 
                     Veritatis debitis nisi tempore veniam architecto nobis.
@@ -87,7 +90,7 @@
             </article>
         </section>
 
-        <section>
+        <section  class="contact">
             <a href="mailto:sandy07r@gmail.com">hello@hithere.com</a>
         </section>
     </main>
