@@ -4,7 +4,7 @@
     --font-primary:  "Space Mono", monospace;
     --font-secondary: "Syne", sans-serif;
     --border-radius: 100px;
-    --padding: 3.125vw;
+    --padding: 3.125vw 6.25vw;
     --blue: #1C47FF;
     --pink: #D6A3FB;
     --green: #D0FF94;
@@ -28,9 +28,10 @@ body {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 70px;
+    line-height: 1em;
     margin: 0px;
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
 }
 
 h2 {
@@ -117,7 +118,9 @@ section.about article {
 section.about article .title {
     flex: 2;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     background-color: var(--blue);
     border-radius: var(--border-radius);
     padding: var(--padding);
