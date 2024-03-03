@@ -3,7 +3,8 @@
 :root {
     --font-primary:  "Space Mono", monospace;
     --font-secondary: "Syne", sans-serif;
-    --borderRadius: 100px;
+    --border-radius: 100px;
+    --padding: 3.125vw;
     --blue: #1C47FF;
     --pink: #D6A3FB;
     --green: #D0FF94;
@@ -85,13 +86,13 @@ section {
     display: flex;
     width: 100%;
     height: calc(100vh - 100px);
-    top: var(--borderRadius);
+    top: var(--border-radius);
     z-index: 2;
 }
 
 section.sticky {
     position: sticky;
-    margin-top: var(--borderRadius);
+    margin-top: var(--border-radius);
 }
 
 section.full-screen {
@@ -104,7 +105,7 @@ section.full-screen {
 section.about .empty {
     flex-basis: 37.5vw;
     background-color: var(--grey);
-    border-radius: var(--borderRadius);
+    border-radius: var(--border-radius);
 }
 
 section.about article {
@@ -118,8 +119,8 @@ section.about article .title {
     display: flex;
     align-items: flex-end;
     background-color: var(--blue);
-    border-radius: var(--borderRadius);
-    padding: 3.125vw;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
 }
 
 section.about article .description {
@@ -127,8 +128,8 @@ section.about article .description {
     display: flex;
     align-items: center;
     background-color: var(--pink);
-    border-radius: var(--borderRadius);
-    padding: 3.125vw;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
     font-family: var(--font-secondary);
     color: #290038;
 }
@@ -147,7 +148,7 @@ section.services figure {
     flex-basis: 68.75vw;
     margin: 0;
     background-color: var(--green);
-    border-radius: var(--borderRadius);
+    border-radius: var(--border-radius);
 }
 
 section.services figure img {
@@ -160,8 +161,8 @@ section.services .text {
     justify-content: center;
     flex-basis: 31.25vw;
     background-color: #1F1A1C;
-    padding: 3.125vw;
-    border-radius: var(--borderRadius);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
 }
 
 section.services .text a {
@@ -195,17 +196,81 @@ section.services.service-js .text a {
     color: var(--blue);
 }
 
+/* ========== SERVICES SECTION ANIMATIONS =========== */
+
+@keyframes float {
+    0% {
+        transform: translateY(-20%) rotate(360deg);
+    }
+
+    100% {
+        transform: translateY(20%);
+    }
+}
+
+section.services.service-html figure img,
+section.services.service-css figure img,
+section.services.service-js figure img {
+    animation: float 2s cubic-bezier(.77,.28,.42,.93) infinite alternate;
+}
+
 /* ============== CONTACT SECTION ============= */
 section.contact {
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(var(--blue), var(--green) 60%, var(--pink) 70%, var(--grey));
-    border-radius: var(--borderRadius);
+    border-radius: var(--border-radius);
 }
 
 section.contact a {
-    font-size: var(--borderRadius);
+    font-size: var(--border-radius);
     color: var(--black);
     font-weight: 500;
+    transition: filter 3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    will-change: filter;
+}
+
+/* ============ ANIMATIONS ============= */
+section.contact a:hover {
+    color: var(--white);
+    filter: blur(20px);
+}
+
+
+/* ============= RESPONSIVE  ============== */
+@media only screen and (max-width: 768px) {
+    :root {
+        --border-radius: 50px;
+        --paddind: 6.25vw;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    nav ul li {
+        margin-left: 25px;
+    }
+
+    section.services article {
+        flex-direction: column;
+    }
+
+    section.services figure {
+        flex-basis: 25vh;
+    }
+
+    section.services figure img {
+        width: 20%;
+    }
+
+    section.contact a {
+        font-size: 50px;
+        transform: rotate(90deg);
+    }
 }
