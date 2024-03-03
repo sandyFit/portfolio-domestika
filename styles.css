@@ -11,6 +11,7 @@
     --white: #FFFFFF;
     --black: #000000;
     --grey: #E5E5E5;
+    --purple: #290038;
 }
 
 body {
@@ -104,9 +105,15 @@ section.full-screen {
 }
 
 section.about .empty {
-    flex-basis: 37.5vw;
+    flex-basis: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--grey);
     border-radius: var(--border-radius);
+    transition: flex-basis 1s cubic-bezier(.17,.67,.65,1.01);
+    color: var(--purple);
+    padding: 6.25vw;
 }
 
 section.about article {
@@ -134,7 +141,7 @@ section.about article .description {
     border-radius: var(--border-radius);
     padding: var(--padding);
     font-family: var(--font-secondary);
-    color: #290038;
+    color: var(--purple);
 }
 
 
